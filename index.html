@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+
+    <style>
+        body {
+            background-color: #a9d7d1;
+        }
+
+        #title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #form-design {
+            width: 550px;
+            margin: 0 auto;
+            background-color: white;
+            text-align: right;
+            padding: 286px;
+            padding-top: 40px;
+            text-align: left;
+            line-height: 2;
+        }
+
+        #description {
+            text-align: center;
+        }
+
+
+        #name,
+        #email,
+        #number {
+            height: 20px;
+            width: 280px;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 2px;
+        }
+
+       
+
+        #textarea {
+            height: 50px;
+            width: 280px;
+            padding: 5px;
+            margin: 10px;
+            border: 1px solid #c0c0c0;
+            border-radius: 2px;
+        }
+
+        #submit{
+            background-color: #59ace0;
+            border-radius: 4px;
+            color: white;
+            font-size: 1em;
+            height: 40px;
+            width: 96px;
+           border-radius: 0px solid;
+            margin: 0 auto;
+        }
+        
+        .rowtab{
+            display: block;
+        }
+        .leftrow{
+            display: inline-block;
+            width: 40%;
+            vertical-align: middle;
+            text-align: right;
+        }
+        .rightrow{
+            display: inline-block;
+            width: 48%;
+            text-align: left;
+            vertical-align: middle;
+        }
+        
+        #dropdown{
+            height: 35px;
+    width: 140px;
+    padding: 5px;
+    margin: 10px;
+    margin-top: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+}
+       
+        
+    </style>
+</head>
+
+<body>
+
+    <main id="main">
+
+        <h1 id="title">Survey Form</h1>
+
+
+        <div id="form-design">
+            <p id="description">Let us know how we can improve freeCodeCamp</p>
+            <form id="survey-form">
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label id="name-label" for="text">Name:</label>
+                    </div>
+                    <div class="rightrow">
+                        <input id="name" required placeholder="Enter Your Name" type="text">
+                    </div>
+                </div> 
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text" id="email-label">Email:</label>
+                    </div>
+                    <div class="rightrow">
+                        <input type="email" id="email" placeholder="Enter Your Email" required>
+                    </div>
+                </div> 
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text" id="number-label">Age:</label>
+                    </div>
+                    <div class="rightrow">
+                        <input type="number" id="number" placeholder="Age" min="0" max="29" required>
+                    </div>
+                </div> 
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text">Which option best describes your current role?</label>
+                    </div>
+                    <div class="rightrow">
+                          <select name="currentpost" id="dropdown">
+                              <option value="Select one option" disabled>Select one Option</option>
+                              <option value="Student">Student</option>
+                              <option value="Businessman">Businessman</option>
+                              <option value="Unemplyment">Unemplyment</option>
+                              <option value="Job">Job</option>
+                          </select>
+                    </div>
+                </div> <br>
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text">How likely is that you would recommend freeCodeCamp to a friend?</label>
+                    </div>
+                    <div class="rightrow">
+                         <input type="radio" name="name" value="Definitly">Definitly <br>
+                <input type="radio" name="name" value="Maybe">Maybe <br>
+                <input type="radio" name="name" value="Not Sure ">Not Sure 
+                    </div>
+                </div> <br>
+
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text">Things that should be improved in the future
+(Check all that apply):</label> <br>
+                    </div>
+                    <div class="rightrow">
+                        <input type="checkbox" name="font" value="font-end"> Front-end Projects <br>
+                        <input type="checkbox" name="font" value="back-end"> Back-end Projects <br>
+                        <input type="checkbox" name="font" value="Data Visualization"> Data Visualization <br>
+                        <input type="checkbox" name="font" value="Challenges"> Challenges<br>
+                        <input type="checkbox" name="font" value="Open Source Community"> Open Source Community<br>
+                        <input type="checkbox" name="font" value="Videos"> Videos <br>
+                    </div>
+                </div> <br>
+               
+                <div class="rowtab">
+                    <div class="leftrow">
+                        <label for="text">Any Comments or Suggession? </label>
+                    </div>
+                    <div class="rightrow">
+                        <input id="textarea" type="textarea" placeholder="Enter your comment here...."> 
+                    </div>
+                </div> 
+                
+
+                <div style="text-align: center">
+                    <button type="submit" id="submit">Submit</button>
+                </div>
+                
+               
+            </form>
+        </div>
+
+
+
+    </main>
+</body>
+
+</html>
